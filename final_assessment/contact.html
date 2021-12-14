@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body{text-align:center;}
+      ul li{display:inline;}
+       </style>
+</head>
+<script>
+  function validation () {
+let a = document.fomrs ["form"]["email"].value ;
+
+if (a == "")
+{
+  alert ("Email must be filled out !");
+  return false ;
+
+}
+  }
+function myFunction() {
+    document.getElementById("demo").innerHTML = "<textarea cols = '50' rows = '20' name='text' id='text_id' class='form-control' style='resize:vertical' ></textarea>";
+}
+
+</script>
+
+<body> 
+   <form name= "form" action="https://formspree.io/f/xknynzvo" method="POST">
+      <div>
+        <label>Name</label>
+        <input type="text" id="username" name="username" >
+      </div> 
+      <div>
+         <label>Email</label>
+        <input type="text" id="email" name="email"  >
+      </div>
+        <div>
+            <label>Address</label>
+       <input type="text" id="Address" name="Address">
+        </div>
+        <div>
+            <label>City</label>
+            <input type="text" id="City" name="City" >
+        </div>
+        <div>
+            <label>Postal Code</label>
+       <input type="text" id="Postal code" name="Postal code" pattern="[A-Z0-9]{6}" >
+        </div>
+        <p>Please select any option below!</p>
+        <div class="radio-prompt">
+            <input type="radio" class="contact-purpose" name="purpose" value="question" onclick="retrieveHiringForm()">Question
+            <input type="radio" class="contact-purpose" name="purpose" value="comment" onclick="retrieveHiringForm()">Comment
+            <input type="radio" class="contact-purpose" name="purpose" value="hiring" onclick="hiringForm()">Hiring
+            <div id="setWage"></div>
+          </div>
+          <textarea class="contact-form-text" ></textarea>
+ 
+ 
+          <button type="submit">Send</button>
+
+   </form>
+
+</body>
+</html>
